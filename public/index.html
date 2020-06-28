@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="author" content="Ekoulé Maneng Charly Karl">
+        <meta name="description" content="An Issue Tracker Microservice">
+        <title>Personal Library Microservice</title>
+        <link rel="stylesheet" href="reset.css">
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <h1>My Library</h1>
+        <p>a personal library microservice</p>
+        <hr>
+        <main>
+            <form action="/api/books" method="POST">
+                <h2>Add a new book</h2>
+                <input type="text" name="title" placeholder="book title *" required>
+                <button type="submit">Add a book</button>
+            </form>
+            <hr>
+            <form id="addComment" action="" method="POST">
+                <h2>Add a new comment</h2>
+                <input type="text" name="id" placeholder="book id *" id="inputIdForComment" required>
+                <textarea name="comment" placeholder="comment *" required></textarea>
+                <button type="submit">Add a comment</button>
+            </form>
+            <hr>
+            <form action="/api/books" method="GET">
+                <h2>Get all books</h2>
+                <button type="submit">Get books</button>
+            </form>
+            <hr>
+            <form id="getBook" action="" method="GET">
+                <h2>Get a book</h2>
+                <input type="text" name="id" placeholder="book id *" id="inputIdForGetBook" required>
+                <button type="submit">Get book</button>
+            </form>
+            <hr>
+            <form action="/api/books" method="DELETE">
+                <h2>Delete all books</h2>
+                <button type="submit">Delete books</button>
+            </form>
+            <hr>
+            <form id="deleteBook" action="/api/books/" method="DELETE">
+                <h2>Delete a book</h2>
+                <input type="text" name="id" placeholder="book id *" id="inputIdForDeleteBook" required>
+                <button type="submit">Delete book</button>
+            </form>
+        </main>
+        <script src="script.js"></script>
+    </body>
+</html>
